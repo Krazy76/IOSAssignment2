@@ -29,3 +29,12 @@ enum TaskPriority: String, CaseIterable, Codable {
            }
        }
 }
+
+enum TaskCategory: String, CaseIterable, Codable {
+    case personal = "Personal"
+    case work = "Work"
+    case shopping = "Shopping"
+    case health = "Health"
+    case finance = "Finance"
+    case other = "Other"
+}
