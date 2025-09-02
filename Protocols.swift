@@ -21,3 +21,7 @@ protocol TaskProtocol {
         func updateDescription(_ newDescription: String?)
 }
 
+protocol TaskPersistable {
+    func save() throws
+    func delete() throws
+}
