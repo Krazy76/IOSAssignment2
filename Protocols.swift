@@ -25,3 +25,16 @@ protocol TaskPersistable {
     func save() throws
     func delete() throws
 }
+
+protocol TaskListManageable {
+    var tasks: [Task] { get set }
+    
+    func addTask(_ task: Task)
+    func removeTask(withId id: UUID) throws
+    func updateTask(_ task: Task) throws
+    func getTask(withId id: UUID) -> Task?
+    func getAllTasks() -> [Task]
+    func getTasksByCategory(_ category: TaskCategory) -> [Task]
+    func getCompletedTasks() -> [Task]
+    func getPendingTasks() -> [Task]
+}
