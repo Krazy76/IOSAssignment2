@@ -14,3 +14,10 @@ protocol TaskProtocol {
     var dueDate: Date? { get set }
     var priority: TaskPriority { get set }
     var category: TaskCategory { get set }
+    
+        func markAsCompleted()
+        func markAsIncomplete()
+        func updateTitle(_ newTitle: String) throws
+        func updateDescription(_ newDescription: String?)
+}
+
