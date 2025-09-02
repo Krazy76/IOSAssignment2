@@ -20,3 +20,12 @@ enum TaskPriority: String, CaseIterable, Codable {
         case .urgent: return .red
         }
     }
+    var sortOrder: Int {
+           switch self {
+           case .low: return 0
+           case .medium: return 1
+           case .high: return 2
+           case .urgent: return 3
+           }
+       }
+}
